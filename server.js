@@ -5,7 +5,7 @@
  */
 
 var app = require('./app');
-var debug = require('debug')('week4:server');
+var debug = require('debug')('expressportfolio:server');
 var http = require('http');
 
 /**
