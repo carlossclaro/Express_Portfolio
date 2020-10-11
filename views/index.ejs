@@ -1,19 +1,6 @@
+<% import partials/header.ejs %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title%></title>
 
-  <!-- CSS Section-->
-  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
-
-  <link rel='stylesheet' href='/Content/app.css' />
-
-</head>
-<body>
   <!--Main Nav here-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Express-Portfolio</a>
@@ -81,12 +68,11 @@
 
   
   <!-- Bottom Nav-->
-  foot
+  <footer>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <h6 class="display-6 navbar-text">&copy; Copyright 2020 All Rights Reserved.</h1>
+    </nav>
+  </footer>
 
-  <!-- Script Selection (Front-Side)-->
-  <script src="/jquery/dist/jquery.min.js"></script>
-  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/Scripts/app.js"></script>
-</body>
-</html>
+  <% import partials/footer.ejs %>
 
