@@ -1,4 +1,6 @@
 /* Custom css goes here */
+/*Created by Carlos Cruz-Claro 0N 2020-10-11
+#300-902-439 */
 .map-container-section {
     overflow:hidden;
     padding-bottom:56.25%;
@@ -11,4 +13,7 @@
     height:100%;
     width:100%;
     position:absolute;
+  }
+  .container{
+    height:300px;
   }
