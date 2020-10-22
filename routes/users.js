@@ -11,19 +11,20 @@ let User = require('../models/userModel');
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
+*/ 
 
-*/
 
 /* GET Route for the User list page - READ Operation */
-router.get('/', (req,res, next) => {
-  User.find((err, UserModel) => {
-    if(err)
-    {
+router.get('/', function(req, res, next)  {
+     User.find((err, UserList) => {
+        if(err)
+        {
         return console.error(err)
-    }
+       }
     else
     {
-      console.log(UserModel);
+      
+      console.log(UserList);
     }
   });
 });
