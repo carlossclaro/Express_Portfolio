@@ -8,83 +8,42 @@
 
 <%- include partials/main_nav.ejs %>
 
-<!-- Tabbed form -->
-<div class="tabbable panel login-form width-400">
-    <ul class="nav nav-tabs nav-justified">
-        <li class="active"><a href="#basic-tab1" data-toggle="tab"><h6 class="text-semibold">Sign in</h6></a></li>
-        <li><a href="#basic-tab2" data-toggle="tab"><h6 class="text-semibold">Register</h6></a></li>
-    </ul>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <div class="tab-content panel-body">
-        <div class="tab-pane fade in active" id="basic-tab1">
-            <form method="post" action="/users/authenticate">
-                <input type="hidden" name="method" value="login">
-
-                <div class="text-center">
-                    <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
-                    <h5 class="content-group">Login to your account <small class="display-block">Your credentials</small></h5>
-                </div>
-
-                <div class="form-group has-feedback has-feedback-left">
-                    <input type="text" class="form-control" placeholder="Username" name="username">
-                    <div class="form-control-feedback">
-                        <i class="icon-user text-muted"></i>
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="text" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="#" class="text-info">Register here</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                <div class="form-group has-feedback has-feedback-left">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
-                    <div class="form-control-feedback">
-                        <i class="icon-lock2 text-muted"></i>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn bg-danger-400 btn-block">Login</button>
-                </div>
-            </form>
-            <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our Conditions</span>
-        </div>
-
-        <div class="tab-pane fade" id="basic-tab2">
-            <form method="post" action="/users/authenticate">
-                <input type="hidden" name="method" value="register">
-
-                <div class="text-center">
-                    <div class="icon-object border-slate-300 text-slate-300"><i class="icon-plus3"></i></div>
-                    <h5 class="content-group">Create new account <small class="display-block">All fields are required</small></h5>
-                </div>
-
-                <div class="form-group has-feedback has-feedback-left">
-                    <input type="text" class="form-control" name="usernameRegister" placeholder="Your username">
-                    <div class="form-control-feedback">
-                        <i class="icon-user-check text-muted"></i>
-                    </div>
-                </div>
-
-                <div class="form-group has-feedback has-feedback-left">
-                    <input type="password" class="form-control" name="passwordRegister" placeholder="Create password">
-                    <div class="form-control-feedback">
-                        <i class="icon-user-lock text-muted"></i>
-                    </div>
-                </div>
-
-                <div class="form-group has-feedback has-feedback-left">
-                    <input type="text" class="form-control" name="emailRegister" placeholder="Your email">
-                    <div class="form-control-feedback">
-                        <i class="icon-mention text-muted"></i>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn bg-danger-400 btn-block">Register</button>
-
-                </br>
-                <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our Conditions</span>
-            </form>
+            </div>
         </div>
     </div>
-</div>
-<!-- /tabbed form -->
+</body>
   
 <%- include partials/bottom_nav.ejs %>
 
