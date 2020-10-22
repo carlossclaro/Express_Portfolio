@@ -8,8 +8,83 @@
 
 <%- include partials/main_nav.ejs %>
 
-  <!-- Main Content-->
- <h1>To add a auth page here</h1>
+<!-- Tabbed form -->
+<div class="tabbable panel login-form width-400">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#basic-tab1" data-toggle="tab"><h6 class="text-semibold">Sign in</h6></a></li>
+        <li><a href="#basic-tab2" data-toggle="tab"><h6 class="text-semibold">Register</h6></a></li>
+    </ul>
+
+    <div class="tab-content panel-body">
+        <div class="tab-pane fade in active" id="basic-tab1">
+            <form method="post" action="/users/authenticate">
+                <input type="hidden" name="method" value="login">
+
+                <div class="text-center">
+                    <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+                    <h5 class="content-group">Login to your account <small class="display-block">Your credentials</small></h5>
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input type="text" class="form-control" placeholder="Username" name="username">
+                    <div class="form-control-feedback">
+                        <i class="icon-user text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="form-control-feedback">
+                        <i class="icon-lock2 text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn bg-danger-400 btn-block">Login</button>
+                </div>
+            </form>
+            <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our Conditions</span>
+        </div>
+
+        <div class="tab-pane fade" id="basic-tab2">
+            <form method="post" action="/users/authenticate">
+                <input type="hidden" name="method" value="register">
+
+                <div class="text-center">
+                    <div class="icon-object border-slate-300 text-slate-300"><i class="icon-plus3"></i></div>
+                    <h5 class="content-group">Create new account <small class="display-block">All fields are required</small></h5>
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input type="text" class="form-control" name="usernameRegister" placeholder="Your username">
+                    <div class="form-control-feedback">
+                        <i class="icon-user-check text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input type="password" class="form-control" name="passwordRegister" placeholder="Create password">
+                    <div class="form-control-feedback">
+                        <i class="icon-user-lock text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input type="text" class="form-control" name="emailRegister" placeholder="Your email">
+                    <div class="form-control-feedback">
+                        <i class="icon-mention text-muted"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn bg-danger-400 btn-block">Register</button>
+
+                </br>
+                <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our Conditions</span>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /tabbed form -->
   
 <%- include partials/bottom_nav.ejs %>
 
