@@ -28,6 +28,10 @@ router.get('/aboutme', function(req, res, next) {
 router.get('/contactme', function(req, res, next) {
   res.render('contactme', { title: 'Contact Me' });
 });
+/* GET auth page. */
+router.get('/authenticate', function(req, res, next) {
+  res.render('authenticate', { title: 'Authentication' });
+});
 
 
 module.exports = router;
