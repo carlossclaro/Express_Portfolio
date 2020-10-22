@@ -17,5 +17,6 @@
   .container{
     height:300px;
   }
+  .navbar-default { margin : 0 !important; }
 
   

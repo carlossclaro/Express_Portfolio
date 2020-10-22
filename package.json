@@ -24,11 +24,11 @@
     "popper": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.6",
     "package-name": "^0.1.0"
   },
   "description": "A1-EXPRESS_PORTFOLIO",
-  "main": "app.js",
+  "main": "./config/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carlossclaro/Express_Portfolio.git"
