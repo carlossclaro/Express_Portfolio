@@ -52,6 +52,13 @@
         <% } %>
           <a class="nav-link" href="/contactme"><i class="fas fa-envelope"></i> Contact Me</a> </a>
         </li>
-         
+
+           <% if (title == "Authentication") { %>
+          <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/authenticate"><i class="fas fa-sign-in-alt"></i>Login</a> </a>
+        </li>
     </div>
   </nav>
