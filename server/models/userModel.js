@@ -2,10 +2,9 @@ let mongoose = require('mongoose');
 
 //Create a model class
 let userModel = mongoose.Schema({
-username: String,
+name: String,
 email: String,
-displayName: String
-
+number: String
 
 },
 {

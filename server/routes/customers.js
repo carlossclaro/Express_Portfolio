@@ -5,7 +5,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 //Connect to our User Model
-let User = require('../models/userModel');
+let User = require('../models/businessModel');
 
 /* GET users listing. 
 router.get('/', function(req, res, next) {
@@ -14,9 +14,9 @@ router.get('/', function(req, res, next) {
 */ 
 
 
-/* GET Route for the User list page - READ Operation */
+/* GET Route for the business customer list page - READ Operation */
 router.get('/', function(req, res, next)  {
-     User.find((err, UserList) => {
+    User.find((err, BusinessCustomerList) => {
         if(err)
         {
         return console.error(err)
@@ -24,7 +24,10 @@ router.get('/', function(req, res, next)  {
     else
     {
       
-      console.log(UserList);
+      console.log(BusinessCustomerList);
+
+      res.render('customers', {title: 'Business Contacts List', BusinessCustomerList: BusinessCustomerList})
+
     }
   });
 });

@@ -1,0 +1,50 @@
+
+<!--
+ *business_contact_view.ejs created by:
+  Carlos Cruz-Claro 0N 2020-10-22
+#300-902-439 
+-->
+
+<!--
+This view to remain hidden to those unauth or not signed in. Should only be visable to 'test' user!
+-->
+<%- include ../partials/header.ejs %>
+
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Main Content -->
+<main class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-12">
+      <h1><%= title %></h1>
+      <br>
+      <table class="table table-boardered table-striped table-hover">
+          <!-- Header Row -->
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Number</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Action</th>
+          </tr>
+
+          <!-- Repeatable Template Row -->
+
+          <% for(let count = 0; count < UserList.length; count++) { %>
+            <tr>
+                <td class="text-center"><%= UserList[count].name %></td>
+                <td class="text-center"><%= UserList[count].number %></td>
+                <td class="text-center"><%= UserList[count].email %></td>
+            </tr>
+          <% } %>
+      </table>
+    </div>
+  </div>
+</main>
+
+
+  
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>
+

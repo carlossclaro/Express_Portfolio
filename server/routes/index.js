@@ -32,10 +32,7 @@ router.get('/contactme', function(req, res, next) {
 router.get('/authenticate', function(req, res, next) {
   res.render('authenticate', { title: 'Authentication' });
 });
-/* GET business_contacts_view page. */
-router.get('/business_contacts_view', function(req, res, next) {
-  res.render('business_contacts_view', { title: ' Business Contacts' });
-});
+
 
 
 
