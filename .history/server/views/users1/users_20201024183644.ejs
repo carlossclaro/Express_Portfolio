@@ -19,18 +19,17 @@ This view to remain hidden to those unauth or not signed in. Should only be visa
     <div class="offset-md-1 col-md-11">
       <h1><%= title %></h1>
       <a href="/users/add" class="btn btn-primary" role="button">
-      <i class="fas fa-plus-circle"></i> Add a user</a>
+      <i class="fas fa-plus-circle"></i>Add a user</a>
     
     </a>
       <br>
       <table class="table table-bordered table-striped table-hover">
-          <!-- Table Header Row -->
+          <!-- Header Row -->
           <tr class="d-flex">
             <th class="text-center col-2">Name</th>
             <th class="text-center col-2">Number</th>
             <th class="text-center col-2">Email</th>
-            <th class="text-center col-3">Action</th>
-            <th class="text-center col-3">Action</th>
+            <th class="text-center col-2">Action</th>
           </tr>
 
           <!-- Repeatable Template Row -->
@@ -40,14 +39,6 @@ This view to remain hidden to those unauth or not signed in. Should only be visa
                 <td class="text-center col-2"><%= UserList[count].name %></td>
                 <td class="text-center col-2"><%= UserList[count].number %></td>
                 <td class="text-center col-2"><%= UserList[count].email %></td>
-                <td class="text-center col-3">
-                  <a href="/users/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
-                 <i class="fas fa-pencil-alt"></i> Edit</a>
-                </td>
-                <td class="text-center col-3">
-                    <a href="/users/delete/<%= UserList[count]._id%>" class="btn btn-danger btn-sm">
-                    <i class="fas fa-trash-alt"></i> Delete</a>
-                </td>
             </tr>
           <% } %>
       </table>

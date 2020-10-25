@@ -35,7 +35,7 @@ router.get('/', function(req, res, next)  {
 
 /* GET Route for displaying Add page - CREATE Operation */
 router.get('/add', (req, res, next) => {
-  res.render('users1/add', {title: 'Add Customer'});
+  res.render('users/users-add', {title: 'Add Customer', UserList: UserList});
 });
 
 /* POST Route for procesisng the Add page - CREATE Operation */
@@ -72,7 +72,7 @@ router.get('/edit/:id', (req, res, next) => {
       res.end(err);
     } else {
       //Show the edit view
-      res.render('users1/edit', {title: 'Edit User', User: userToEdit})
+      res.render('users/edit', {title: 'Edit User', book: userToEdit})
     }
   });
 });
@@ -93,7 +93,7 @@ User.updateOne({_id: id}, updatedUser, (err) => {
     res.end(err)
   } else {
     //Refresh the user list
-    res.redirect('/users');
+    res.redirect('users');
   }
   });
 });
@@ -101,13 +101,13 @@ User.updateOne({_id: id}, updatedUser, (err) => {
 router.get('/delete/:id', (req, res, next) => {
   let id = req.params.id;
 
-  User.remove({_id: id}, (err) => {
+  Book.remove({_id: id}, (err) => {
       if(err) {
         console.log(err)
         res.end(err)
       } else {
         //Refresh the user list 
-        res.redirect('/users')
+        res.redirect('users')
       }
   })
 

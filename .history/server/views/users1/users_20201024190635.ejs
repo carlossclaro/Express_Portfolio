@@ -30,7 +30,6 @@ This view to remain hidden to those unauth or not signed in. Should only be visa
             <th class="text-center col-2">Number</th>
             <th class="text-center col-2">Email</th>
             <th class="text-center col-3">Action</th>
-            <th class="text-center col-3">Action</th>
           </tr>
 
           <!-- Repeatable Template Row -->
@@ -41,11 +40,11 @@ This view to remain hidden to those unauth or not signed in. Should only be visa
                 <td class="text-center col-2"><%= UserList[count].number %></td>
                 <td class="text-center col-2"><%= UserList[count].email %></td>
                 <td class="text-center col-3">
-                  <a href="/users/edit/<%= UserList[count]._id %>" class="btn btn-primary btn-sm">
+                  <a href="/users/edit/<%= UserList[count]._id %>" class="btn btn-primary">
                  <i class="fas fa-pencil-alt"></i> Edit</a>
                 </td>
                 <td class="text-center col-3">
-                    <a href="/users/delete/<%= UserList[count]._id%>" class="btn btn-danger btn-sm">
+                    <a href="/users/delete/<%= UserList[count]._id%>" class="btn btn-danger">
                     <i class="fas fa-trash-alt"></i> Delete</a>
                 </td>
             </tr>

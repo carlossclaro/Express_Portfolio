@@ -35,7 +35,7 @@ router.get('/', function(req, res, next)  {
 
 /* GET Route for displaying Add page - CREATE Operation */
 router.get('/add', (req, res, next) => {
-  res.render('users1/add', {title: 'Add Customer'});
+  res.render('/users1/add', {title: 'Add Customer'});
 });
 
 /* POST Route for procesisng the Add page - CREATE Operation */
