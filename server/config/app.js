@@ -71,7 +71,7 @@ passport.use(guestUser.createStrategy());
 //Serialize and deserialize (encrpyt and decrypt) guest infro 
 passport.serializeUser(guestUser.serializeUser());
 passport.deserializeUser(guestUser.deserializeUser());
-passport.use(strategy);
+//passport.use(strategy);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //app.use('/customers', businessRouter)
