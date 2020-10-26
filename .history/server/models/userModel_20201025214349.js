@@ -8,7 +8,7 @@ number: String
 
 },
 {
-    collection: "b/users"
+    collection: "user"
 });
 
-module.exports = mongoose.model('Users', userModel);
+module.exports = mongoose.model('User', userModel);
