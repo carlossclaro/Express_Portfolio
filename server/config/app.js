@@ -71,6 +71,7 @@ let User = userModel.User;
 // implement a User Authentication Strategy
 passport.use(User.createStrategy());
 
+<<<<<<< HEAD
 // serialize and deserialize the User info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -78,6 +79,12 @@ passport.deserializeUser(User.deserializeUser());
 //passport.use(strategy);
 
 // routing
+=======
+//Serialize and deserialize (encrpyt and decrypt) guest infro 
+passport.serializeUser(guestUser.serializeUser());
+passport.deserializeUser(guestUser.deserializeUser());
+//passport.use(strategy);
+>>>>>>> fbf574c951e87a624e073b6c4a7caa842cad5ffb
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
