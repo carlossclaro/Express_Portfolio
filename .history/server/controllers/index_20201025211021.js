@@ -6,7 +6,6 @@ let passport = require('passport');
 //Enable JWT
 let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
-
 //Create guestUsers Model 
 let userModel = require('../models/user');
 let User = userModel.User; // alias

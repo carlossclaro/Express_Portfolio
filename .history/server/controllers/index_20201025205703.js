@@ -6,7 +6,6 @@ let passport = require('passport');
 //Enable JWT
 let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
-
 //Create guestUsers Model 
 let userModel = require('../models/user');
 let User = userModel.User; // alias
@@ -71,24 +70,25 @@ module.exports.processLoginPage = (req, res, next) => {
             return res.redirect('/login');
         }
         req.login(user, (err) => {
-            // Ifwe have a server error
+            // server error?
             if(err)
             {
                 return next(err);
             }
 
-            const payload = 
+           /* const payload = 
             {
                 id: user._id,
                 displayName: user.displayName,
                 username: user.username,
                 email: user.email
             }
-            
+
             const authToken = jwt.sign(payload, DB.Secret, {
                 expiresIn: 604800 // 1 week
             });
-            /*  //Use when ready to convert to API
+*/
+            /* TODO - Getting Ready to convert to API
             res.json({success: true, msg: 'User Logged in Successfully!', user: {
                 id: user._id,
                 displayName: user.displayName,
@@ -96,7 +96,6 @@ module.exports.processLoginPage = (req, res, next) => {
                 email: user.email
             }, token: authToken});
             */
-            
             //Redirect if user is already logged in
             return res.redirect('/users');
         });
@@ -150,15 +149,17 @@ module.exports.processRegisterPage = (req, res, next) => {
         }
         else
         {
-            //Use when ready to convert to API
-            //If no error exists, then registration is a success. 
-            //Redirect user and auth them
-           /* res.json({success: true, msg: 'User Registered Successfully!'});
-            
+            // if no error exists, then registration is successful
+
+            // redirect the user and authenticate them
+
+            /* TODO - Getting Ready to convert to API
+            res.json({success: true, msg: 'User Registered Successfully!'});
+            */
+
             return passport.authenticate('local')(req, res, () => {
                 res.redirect('/users')
             });
-            */
         }
     });
 }

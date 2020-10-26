@@ -5,8 +5,7 @@ let mongoose = require('mongoose');
 //Create a reference to the model 
 let User = require('../models/userModel')
 
-//Used when using API
-let jwt = require('jsonwebtoken');
+let jwt = require('jsonwebtoken')
 
 /* GET Route for the User list page - READ Operation */
 module.exports.displayUserList = function(req, res, next)  {

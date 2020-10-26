@@ -6,7 +6,6 @@ let passport = require('passport');
 //Enable JWT
 let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
-
 //Create guestUsers Model 
 let userModel = require('../models/user');
 let User = userModel.User; // alias
@@ -88,14 +87,13 @@ module.exports.processLoginPage = (req, res, next) => {
             const authToken = jwt.sign(payload, DB.Secret, {
                 expiresIn: 604800 // 1 week
             });
-            /*  //Use when ready to convert to API
+
             res.json({success: true, msg: 'User Logged in Successfully!', user: {
                 id: user._id,
                 displayName: user.displayName,
                 username: user.username,
                 email: user.email
             }, token: authToken});
-            */
             
             //Redirect if user is already logged in
             return res.redirect('/users');
